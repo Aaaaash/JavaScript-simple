@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		text-align: center;
+	}
+	input{
+		font:12px;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var aBtn=document.getElementsByTagName("input")[0];
+		var i=0;
+		aBtn.onclick=function(){
+			aBtn.value=++i;
+			alert(i);
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value="0"/>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var aInput=document.getElementsByTagName("input");
+		var aSpan=document.getElementsByTagName("span")[0];
+		var i=0;
+		for(i=0;i<aInput.length-1;i++){
+			aInput[i].onkeyup=function(){
+				this.value=this.value.replace(/[^\d]/,"");
+			}
+		}
+		aInput[2].onclick=function(){
+			if(aInput[0].value==""||aInput[1].value==""){
+				alert("请输入数字");
+			}else{
+				aSpan.innerHTML=Math.max(aInput[0].value,aInput[1].value);
+			}
+			// (aInput[0].value==""||aInput[1].value=="")?
+			// alert("请输入数字"):
+			// (aSpan.innerHTML=Math.max(aInput[0].value,aInput[1].value))
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="text" class="f-text"/><strong>vs</strong><input type="text" class="f-text"/><input type="button" value="最大的数是：" class="f-btn"/><span>?</span>
+</body>
+</html>

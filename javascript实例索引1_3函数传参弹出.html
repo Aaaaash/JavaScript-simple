@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		font-size: 12px;
+		text-align: center;
+	}
+	input{
+		border:1px solid #ccc;
+		padding: 3px;
+	}
+	button{
+		cursor: pointer;
+	}
+	</style>
+	<script type="text/javascript">
+	var myFn=function(a,b){
+		alert(a.value);
+		alert(b.value);
+	}
+	window.onload=function(){
+		var olnput=document.getElementsByTagName("input");
+		var oBtn=document.getElementsByTagName("button")[0];
+		oBtn.onclick=function(){
+			myFn(olnput[0],olnput[1])
+		}
+	}
+	</script>
+</head>
+<body>
+	<p><input type="text" value="酒泉市"/></p>
+	<p><input type="text" value="瓜州县"/></p>
+	<p><button>传参</button></p>
+</body>
+</html>

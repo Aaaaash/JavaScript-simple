@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		color:#999;
+	}
+	#outer{
+		width: 500px;
+		margin:0 auto;
+		font-size:14px;
+	}
+	#outer input{
+		padding: 3px;
+		border:1px solid #ccc;
+		font-family: inherit;
+		width: 220px;
+		margin-right: 10px;
+	}
+	.sum{
+		font-size: 30px;
+		color:red;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oBtn=document.getElementsByTagName("button")[0];
+		var olnput=document.getElementsByTagName("input")[0];
+		var oStrong=document.getElementsByTagName("strong")[0];
+		olnput.onkeyup=function(){
+			this.value=this.value.replaca(/[^(\d)|(,)]/,"");
+		}
+		oBtn.onclick=function(){
+			var sum=0;
+			var olnput=document.getElementsByTagName("input")[0].value.split(",");
+			for(var i in olnput){
+				sum+=parseInt(olnput[i]);
+			}
+			oStrong.innerHTML=sum;
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<label><input type="text" value="1,2,3,4,5,6,7,8,9,10"><span>输入数字求和，数字之间用半角“,”隔开</span></label>
+		<p><button>求和</button></p>
+		<strong class="sum"></strong>
+	</div>
+</body>
+</html>

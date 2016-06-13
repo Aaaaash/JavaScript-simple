@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body,div,ul,li,h2{
+		margin:0;
+		padding:0;
+	}
+	body{
+		font-size: 12px;
+	}
+	ul{
+		list-style-type: none;
+	}
+	#outer{
+		width:200px;
+		border:1px solid #aaa;
+		margin:10px auto;
+	}
+	#outer h2{
+		cursor:pointer;
+		color:#57646e;
+		font-size: 14px;
+		font-weight: 400;
+		border:1px solid;
+		height: 30px;
+		line-height: 30px;
+		padding-left:10px;
+		background: #ced3d7;
+		border-color:#fff #e9edf2;
+	}
+	#outer ul{
+		border-top:1px solid #dee3e6;
+	}
+	#outer li{
+		height: 25px;
+		line-height: 25px;
+		vertical-align:top;
+	}
+	#outer a{
+		display: block;
+		color: #6b7980;
+		background: #e9edf2;
+		text-decoration: none;
+		padding: 0 10px;
+	}
+	#outer a:hover{
+		background:#fff;
+		text-decoration: underline;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oH2=document.getElementsByTagName("h2")[0];
+		var oUl=document.getElementsByTagName("ul")[0];
+		oH2.onclick=function(){
+			var style=oUl.style;
+			if(style.display=="none"){
+				style.display="block";
+			}else{
+				style.display="none";
+			}
+			// oH2.className=style.display=="none"?"open":"";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<h2>播放列表</h2>
+		<ul>
+			<li><a href="javascript:;">独家记忆——陈小春</a></li>
+			<li><a href="javascript:;">红豆——王菲</a></li>
+			<li><a href="javascript:;">猜不透——叮当</a></li>
+			<li><a href="javascript:;">自导自演——周杰伦</a></li>
+			<li><a href="javascript:;">浪漫窝——弦子</a></li>
+			<li><a href="javascript:;">哎呦——nig</a></li>
+		</ul>
+	</div>
+</body>
+</html>

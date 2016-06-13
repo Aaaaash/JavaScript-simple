@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		color:#fff;
+		font:12px/1.5 Tahoma;
+	}
+	#div1{
+		width: 200px;
+		height: 200px;
+		background: black;
+		margin:0 auto;
+		padding: 10px;
+		border:10px solid #000;
+		cursor:crosshair;
+	}
+	#div1:hover{
+		color:red;
+		background: #f0f0f0;
+		border:10px solid red;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById("div1");
+		oDiv.onmouseover=function(){
+			oDiv.className="hover";
+		}
+		oDiv.onmouseout=function(){
+			oDiv.className="";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="div1">鼠标移入改变样式，鼠标移出恢复</div>
+</body>
+</html>

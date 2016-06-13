@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	ul,li{
+		margin:0;
+		padding: 0;
+		list-style-type: none;
+	}
+	#imgList{
+		width:700px;
+		overflow: hidden;
+		zoom:1;
+		border:1px solid #333;
+		margin:0 auto;
+		padding:0 0 10px 10px;
+	}
+	#imgList li{
+		float:left;
+		width: 128px;
+		height: 128px;
+		border:1px solid #ccc;
+		margin:10px 10px 0 0;
+	}
+	#imgList li img{
+		float:left;
+		opacity:0.3;
+		cursor: crosshair;
+		filter:alpha(opacity=30);
+	}
+	#imgList li.current img{
+		opacity:1;
+		filter:alpha(opacity=100);
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oLi=document.getElementsByTagName("li");
+		for(var i=0;i<oLi.length;i++){
+			oLi[i].onmouseover=function(){
+				this.className="current";
+			}
+			oLi[i].onmouseout = function (){
+			this.className = ""	;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+		<ul id="imgList">
+		    <li><img src="img/app-icon.jpg" /></li>
+		    <li><img src="img/demo4.jpg" /></li>
+		    <li><img src="img/demo9.jpg" /></li>
+		    <li><img src="img/demo10.jpg" /></li>
+		</ul>
+</body>
+</html>
